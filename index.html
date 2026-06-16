@@ -1,60 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoKyma</title>
+
   <style>
+    :root {
+      --navy: #002B5B;
+      --blue: #0077C8;
+      --cyan: #00CBE6;
+      --green: #7CCB5E;
+      --light: #F2F4F7;
+      --white: #ffffff;
+      --text: #102033;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 0 20px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
       line-height: 1.6;
-      color: #222;
     }
-    h1 {
-      color: #1f5f5b;
+
+    header {
+      background: linear-gradient(135deg, var(--navy), #00172f);
+      color: var(--white);
+      padding: 50px 20px;
+      text-align: center;
     }
+
+    .logo {
+      max-width: 420px;
+      width: 90%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: -30px auto 50px;
+      padding: 0 20px;
+    }
+
     .card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
-      background: #fafafa;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(0, 43, 91, 0.12);
+      border-top: 5px solid var(--cyan);
     }
-    a {
-      color: #0b66c3;
+
+    .card h2 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .highlight {
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .links a {
+      display: block;
+      margin: 8px 0;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--green);
     }
   </style>
 </head>
+
 <body>
-  <h1>GeoKyma</h1>
+  <header>
+    <img src="geokyma-logo.png" alt="GeoKyma Logo" class="logo" />
+    <h1>GeoKyma</h1>
+    <p class="tagline">From Data to Spatial Intelligence</p>
+  </header>
 
-  <p>
-    GeoKyma develops geospatial tools and mobile mapping solutions.
-  </p>
-
-  <div class="card">
-    <h2>GeoPDF Maps</h2>
-    <p>
-      GeoPDF Maps is an Android app for viewing georeferenced PDF maps with offline GPS support.
-    </p>
-    <p>
-      <a href="https://play.google.com/store/apps/details?id=com.geokyma.geopdfmaps">
-        View GeoPDF Maps on Google Play
+  <main>
+    <section class="card">
+      <h2>GeoPDF Maps</h2>
+      <p>
+        <span class="highlight">GeoPDF Maps</span> is an Android app designed for viewing
+        georeferenced PDF maps with offline GPS support.
+      </p>
+      <p>
+        The app helps users work with spatial map documents in the field, even when internet
+        connectivity is limited.
+      </p>
+      <a
+        class="button"
+        href="https://play.google.com/store/apps/details?id=com.geokyma.geopdfmaps"
+        target="_blank"
+        rel="noopener"
+      >
+        View on Google Play
       </a>
-    </p>
-  </div>
+    </section>
 
-  <div class="card">
-    <h2>Resources</h2>
-    <p>
-      <a href="app-ads.txt">App-ads.txt</a>
-    </p>
-    <p>
+    <section class="card">
+      <h2>About GeoKyma</h2>
+      <p>
+        GeoKyma develops geospatial tools, mapping workflows, and spatial intelligence solutions
+        for practical field and data-driven applications.
+      </p>
+    </section>
+
+    <section class="card links">
+      <h2>Resources</h2>
       <a href="privacy-policy.html">Privacy Policy</a>
-    </p>
-  </div>
+      <a href="app-ads.txt">App-ads.txt</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 <span>GeoKyma</span>. All rights reserved.
+  </footer>
 </body>
 </html>
