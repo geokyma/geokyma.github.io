@@ -103,10 +103,7 @@
     a {
       color: var(--blue);
       font-weight: bold;
-    }
-
-    .muted {
-      color: var(--muted);
+      word-break: break-word;
     }
 
     .back-link {
@@ -143,7 +140,7 @@
   <header>
     <div class="header-inner">
       <h1>Privacy Policy for GeoPDF Maps</h1>
-      <div class="subtitle">Effective date: May 26, 2026</div>
+      <div class="subtitle">Effective date: July 23, 2026</div>
     </div>
   </header>
 
@@ -159,16 +156,21 @@
 
       <h2>Information We Collect</h2>
       <p>
-        GeoPDF Maps does not require an account and does not collect names, email addresses,
-        passwords, or contact information.
+        GeoPDF Maps does not require you to create an account and does not collect names, email
+        addresses, passwords, phone numbers, or contact information unless you choose to contact us
+        directly.
       </p>
-      <p>The app may access or use the following information on your device:</p>
+      <p>The app may access, collect, or process the following information:</p>
       <ul>
         <li>Location data: used to show your current position and direction on the selected GeoPDF map.</li>
         <li>PDF files selected by you: used to display and georeference your map.</li>
+        <li>App usage and interaction data: used to understand app functionality, errors, feature use, ads, and subscriptions.</li>
+        <li>Crash logs and diagnostics: used to diagnose and fix bugs.</li>
+        <li>Anonymous app user identifiers: used for app functionality such as subscription entitlement checks.</li>
+        <li>Purchase and subscription status: used to unlock Standard subscription features.</li>
         <li>
-          App usage data related to ads and app functionality: processed by third-party services
-          such as Google AdMob and Mapbox as described below.
+          Device identifiers, advertising identifiers, approximate location, ad interactions, and
+          related diagnostics: processed by advertising services as described below.
         </li>
       </ul>
 
@@ -183,7 +185,12 @@
       </p>
       <p>
         The app may request foreground location permission. Location is used while the app is open
-        and the map/GPS features are active.
+        and the map/GPS features are active. GPS updates may be paused or reduced when the app is in
+        the background to reduce battery use.
+      </p>
+      <p>
+        Third-party services such as Google AdMob and Mapbox may process approximate location, IP
+        address, or technical request information when their services are used.
       </p>
 
       <h2>PDF Maps and Local Storage</h2>
@@ -193,8 +200,13 @@
         PDF again.
       </p>
       <p>
-        These files are stored locally inside the app's private storage area. They are not uploaded
-        to our server.
+        These files are stored locally inside the app's private storage area. They are not
+        automatically uploaded to our server.
+      </p>
+      <p>
+        If the app cannot read usable georeference information from a PDF, it may show a support
+        message asking you to email the PDF to GeoKyma for review. Sending a PDF to us is optional
+        and only happens if you choose to email it yourself.
       </p>
       <p>You can remove saved maps from within the app by deleting the relevant map tile.</p>
 
@@ -205,11 +217,11 @@
       </p>
       <p>
         When an online basemap is enabled, Mapbox may receive technical information required to
-        serve map tiles, such as your device's IP address, requested map tile locations, app
-        requests, and related usage information.
+        provide map content, such as your device's IP address, requested map locations, app
+        requests, device information, and related usage information.
       </p>
       <p>
-        GeoPDF Maps caches some basemap tiles on your device to reduce repeated network requests
+        GeoPDF Maps may cache some basemap data on your device to reduce repeated network requests
         and improve performance.
       </p>
       <p>
@@ -217,18 +229,70 @@
         <a href="https://www.mapbox.com/legal/privacy">https://www.mapbox.com/legal/privacy</a>
       </p>
 
-      <h2>Advertising and Google AdMob</h2>
+      <h2>Firebase Services</h2>
       <p>
-        GeoPDF Maps uses Google AdMob to show ads, including banner ads and rewarded ads.
+        GeoPDF Maps uses Firebase services to improve reliability, understand app usage, configure
+        app behavior, and support subscription entitlements.
+      </p>
+      <p>Firebase services used by the app may include:</p>
+      <ul>
+        <li>Firebase Analytics: used to understand app interactions and feature usage.</li>
+        <li>
+          Firebase Crashlytics: used to collect crash logs, nonfatal errors, diagnostics, device
+          information, and app state information to help diagnose and fix problems.
+        </li>
+        <li>Firebase Remote Config: used to update app configuration values without releasing a new app version.</li>
+        <li>Firebase Authentication: used for anonymous app authentication. This does not require you to create an account.</li>
+        <li>Cloud Firestore and Cloud Functions: used to store and verify Standard subscription entitlement status.</li>
+      </ul>
+      <p>
+        Firebase may process technical information such as app instance identifiers, anonymous user
+        identifiers, device information, diagnostics, crash data, and usage events according to
+        Google's privacy policies.
+      </p>
+      <p>
+        Firebase privacy and security information is available at:
+        <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>
+      </p>
+      <p>
+        Google's privacy policy is available at:
+        <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+      </p>
+
+      <h2>Subscriptions and Google Play Billing</h2>
+      <p>
+        GeoPDF Maps offers an optional Standard subscription. Standard removes ads and unlocks
+        additional app features, including additional map tiles and online basemaps.
+      </p>
+      <p>
+        Subscriptions are processed by Google Play Billing. GeoPDF Maps does not receive or store
+        your payment card details.
+      </p>
+      <p>
+        When you purchase, restore, or use a Standard subscription, the app may receive purchase and
+        subscription status information from Google Play. GeoPDF Maps may verify the subscription
+        using Firebase Cloud Functions and store entitlement status in Cloud Firestore under an
+        anonymous app user identifier.
+      </p>
+      <p>You can manage or cancel subscriptions through Google Play.</p>
+
+      <h2>Advertising, Google AdMob, and Mediation Partners</h2>
+      <p>
+        GeoPDF Maps uses Google AdMob to show ads, including banner, interstitial, and rewarded ads.
       </p>
       <p>
         Rewarded ads may be used to unlock temporary app features, such as additional map tiles or
         online basemap access for a limited time.
       </p>
       <p>
-        Google AdMob may collect and process information such as device identifiers, advertising
-        identifiers, approximate location, ad interactions, diagnostics, and other data needed to
-        provide, measure, and improve ads.
+        Ads may be served through AdMob mediation partners. Current mediation partners may include
+        InMobi and Unity Ads.
+      </p>
+      <p>
+        Google AdMob, InMobi, Unity Ads, and related advertising services may collect and process
+        information such as device identifiers, advertising identifiers, IP address, approximate
+        location, ad interactions, diagnostics, app information, and fraud-prevention data to
+        provide, measure, personalize, and improve ads.
       </p>
       <p>
         Google's privacy policy is available at:
@@ -237,6 +301,14 @@
       <p>
         Google's information about ads is available at:
         <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
+      </p>
+      <p>
+        InMobi's privacy policy is available at:
+        <a href="https://advertising.inmobi.com/privacy-policy">https://advertising.inmobi.com/privacy-policy</a>
+      </p>
+      <p>
+        Unity's game player and app user privacy policy is available at:
+        <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a>
       </p>
 
       <h2>In-App Review</h2>
@@ -249,19 +321,22 @@
       <h2>Internet Access</h2>
       <p>
         GeoPDF Maps can work with saved GeoPDF maps without an internet connection. Internet access
-        is used for optional online basemaps, ads, and related third-party services.
+        is used for optional online basemaps, ads, subscription verification, Firebase services, and
+        related third-party services.
       </p>
 
       <h2>Data Sharing</h2>
       <p>We do not sell your personal information.</p>
       <p>
         GeoPDF Maps may share data with third-party service providers only as needed for app
-        functionality, including:
+        functionality, advertising, diagnostics, subscriptions, and online basemaps, including:
       </p>
       <ul>
         <li>Google AdMob for advertising.</li>
-        <li>Google Play services for in-app review and app platform functionality.</li>
-        <li>Mapbox for online basemap tiles.</li>
+        <li>InMobi and Unity Ads for mediated advertising.</li>
+        <li>Firebase and Google Play services for analytics, crash reporting, app configuration, subscriptions, in-app review, and app platform functionality.</li>
+        <li>Google Play Billing for subscription purchases and subscription management.</li>
+        <li>Mapbox for online basemap content.</li>
       </ul>
       <p>These third-party services process data according to their own privacy policies.</p>
 
@@ -281,8 +356,17 @@
         app or uninstall the app.
       </p>
       <p>
-        Third-party services such as Google AdMob, Google Play, and Mapbox may retain data according
-        to their own retention policies.
+        Subscription entitlement records may be retained while needed to provide subscription
+        access, restore purchases, prevent abuse, and comply with platform or legal requirements.
+      </p>
+      <p>
+        If you email a PDF or support request to GeoKyma, we may retain that email and attachment as
+        needed to review the issue, improve PDF compatibility, respond to you, and maintain support
+        records.
+      </p>
+      <p>
+        Third-party services such as Google AdMob, Firebase, Google Play, InMobi, Unity Ads, and
+        Mapbox may retain data according to their own retention policies.
       </p>
 
       <h2>Your Choices</h2>
@@ -291,6 +375,8 @@
         <li>Deny or revoke location permission in your device settings.</li>
         <li>Use saved GeoPDF maps without enabling online basemaps.</li>
         <li>Remove saved map tiles from within the app.</li>
+        <li>Choose whether to email unsupported PDFs to GeoKyma for review.</li>
+        <li>Manage or cancel your Standard subscription through Google Play.</li>
         <li>Reset or limit your device advertising ID using your Android privacy settings.</li>
         <li>Uninstall the app to remove locally stored app data.</li>
       </ul>
